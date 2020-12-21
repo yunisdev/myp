@@ -1,4 +1,4 @@
-# Welcome to PSM <img width="30px" src="assets/psm.svg"></img>
+# Welcome to PSM <img width="30px" src="assets/psm.svg"/>
 ### What is PSM?
 <b>PSM</b> (Python Script Manager) is a <b>script manager</b> for Python programming language. You can manage your scripts with this tool. You can create scripts, use them, delete them and etc. PSM gives you chance to call longer commands with shorter commands. I inspired by <b>npm scripts</b> to make Python version of it.
 Check out <a href="FEATURES.md">New features</a> or <a href="CONTRIBUTION.md">Contribution</a> documentation
