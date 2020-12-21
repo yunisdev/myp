@@ -2,8 +2,8 @@
 ### What is PSM?
 <b>PSM</b> (Python Script Manager) is a <b>script manager</b> for Python programming language. You can manage your scripts with this tool. You can create scripts, use them, delete them and etc. PSM gives you chance to call longer commands with shorter commands. I inspired by <b>npm scripts</b> to make Python version of it.
 Check out <a href="FEATURES.md">New features</a> or <a href="CONTRIBUTION.md">Contribution</a> documentation
-## Installation
 
+## Installation
 For install PSM you will need pip. I you have not click <a href="https://pip.pypa.io/en/stable/">here</a>
 After installing pip, enter command below.
 ```bash
@@ -19,8 +19,19 @@ First you need to initialize PSM in your directory.
 ```bash
 psm init
 ```
+You can also start with template.
+###### Some of available templates:
+- blank
+- django
+
+Example,
+```bash
+psm init -t django
+# or
+psm init --template="django"
+```
 It will create `psm.json` which keeps your script informations.
-By default, `psm init` will add script named `hello` which output `Hello World!!!` to screen.
+
 #### Create Script
 To create script, use `add` command.
 ```bash
@@ -31,23 +42,28 @@ You can also pass them as options
 ```bash
 psm add --name="Name of script" --command="Command"
 ```
+
 #### List scripts
 To get list of scripts, enter command below:
 ```bash
 psm list
 ```
+
 #### Run scripts
 To run scripts use syntax below:
 ```bash
 psm run [SCRIPT_NAME]
 ```
+
 #### Remove script
 If you want to remove unused scripts, enter command below:
 ```bash
 psm rm -n [SCRIPT_NAME]
 ```
+
 #### Special scripts
 If you name a script which is in list below, you can use special script feature.
+
 ###### List of special scripts:
 - start
 - deploy
