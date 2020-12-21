@@ -20,7 +20,7 @@ First you need to initialize PSM in your directory.
 psm init
 ```
 You can also start with template.
-###### Some of available templates:
+##### Some of available templates:
 - blank
 - django
 
@@ -64,7 +64,7 @@ psm rm -n [SCRIPT_NAME]
 #### Special scripts
 If you name a script which is in list below, you can use special script feature.
 
-###### List of special scripts:
+##### List of special scripts:
 - start
 - deploy
 - build
@@ -87,3 +87,5 @@ Or you can output dependencies to `requirements.txt`
 ```bash
 psm freeze
 ```
+<b>Note:</b>
+You must install `python-script-manager` itself to your virtual environment too if you use virtual environment. Otherwise, it will work for system pip. For example, if you try to freeze, it will add all packages on system to `requirements.txt`
