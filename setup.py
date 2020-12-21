@@ -1,11 +1,12 @@
 import setuptools
+from python_script_manager import const
 
 with open("README.md","r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="python-script-manager",
-    version="0.0.4",
+    version=const.version,
     author="YunisDEV",
     author_email="yunisdev.04@gmail.com",
     description="Run scripts easily...",

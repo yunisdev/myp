@@ -9,6 +9,9 @@ def loadScripts():
     with open(const.filename, 'rt') as s:
         return json.load(s)['scripts']
 
+def runScriptDirectly(script):
+    print(f'\n\t> {script}\n')
+    os.system(script)
 
 def addScript(name, command):
     with open(const.filename, 'rt') as s:
@@ -41,7 +44,7 @@ def runScript(name):
     scripts = loadScripts()
     called_script = scripts.get(name, None)
     if called_script:
-        print(f'\t> {called_script}')
+        print(f'\n\t> {called_script}\n')
         os.system(called_script)
     else:
         raise Exception(f'Can not find script named "{name}"')

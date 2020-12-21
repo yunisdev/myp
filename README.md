@@ -1,7 +1,7 @@
 # Welcome to PSM <img width="30px" src="assets/psm.svg"></img>
 ### What is PSM?
 <b>PSM</b> (Python Script Manager) is a <b>script manager</b> for Python programming language. You can manage your scripts with this tool. You can create scripts, use them, delete them and etc. PSM gives you chance to call longer commands with shorter commands. I inspired by <b>npm scripts</b> to make Python version of it.
-
+Check out <a href="FEATURES.md">New features</a> or <a href="CONTRIBUTION.md">Contribution</a> documentation
 ## Installation
 
 For install PSM you will need pip. I you have not click <a href="https://pip.pypa.io/en/stable/">here</a>
@@ -45,4 +45,29 @@ psm run [SCRIPT_NAME]
 If you want to remove unused scripts, enter command below:
 ```bash
 psm rm -n [SCRIPT_NAME]
+```
+#### Special scripts
+If you name a script which is in list below, you can use special script feature.
+###### List of special scripts:
+- start
+- deploy
+- build
+
+To run special scripts, use syntaxt below:
+```bash
+psm SPECIAL_SCRIPT
+```
+Example,
+```bash
+psm build
+```
+
+#### PIP shortcuts
+To install dependencies in `requirements.txt`, use
+```bash
+psm install
+```
+Or you can output dependencies to `requirements.txt`
+```bash
+psm freeze
 ```

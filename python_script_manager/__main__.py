@@ -1,5 +1,6 @@
 import sys
 import click
+import os
 try:
     from .funcs import *
     from . import const
@@ -56,6 +57,27 @@ def rm(**kwargs):
         name = input('Enter name of script to remove: ')
     removeScript(name)
 
+
+@main.command()
+def install(**kwargs):
+    os.system('pip install -r requirements.txt')
+
+
+@main.command()
+def freeze(**kwargs):
+    os.system('pip3 freeze > requirements.txt')
+
+@main.command()
+def build(**kwargs):
+    runScript('build')
+
+@main.command()
+def start(**kwargs):
+    runScript('start')
+
+@main.command()
+def deploy(**kwargs):
+    runScript('deploy')
 
 if __name__ == '__main__':
     args = sys.argv
