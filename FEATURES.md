@@ -1,3 +1,8 @@
+#### v1.0.3
+- Bug fixes
+- Table view for command list
+- Templates
+
 #### v1.0.2
 - Bug fixes
 

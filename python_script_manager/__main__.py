@@ -7,6 +7,7 @@ try:
 except ImportError:
     from funcs import *
     import const
+from prettytable import PrettyTable
 
 
 @click.group()
@@ -16,8 +17,10 @@ def main():
 
 
 @main.command()
+@click.option('-t', '--template', 'template', default='blank')
 def init(**kwargs):
-    initialize()
+    template = kwargs.pop('template')
+    initialize(template)
 
 
 @main.command()
@@ -32,21 +35,30 @@ def run(**kwargs):
 @main.command()
 @click.option('-n', '--name', 'name', required=False)
 @click.option('-c', '--command', 'command', required=False)
+@click.option('-d', '--description', 'description', required=False)
 def add(**kwargs):
     name = kwargs.pop('name')
     command = kwargs.pop('command')
+    description = kwargs.pop('description')
     while not name:
         name = input('Enter name for script: ')
     while not command:
         command = input('Enter command for script: ')
-    addScript(name, command)
+    if not description:
+        description = input('Enter description for script (optional):')
+    addScript(name, command, description)
 
 
 @main.command()
 def list(**kwargs):
+    cmds = PrettyTable()
+    cmds.field_names = ['Name', 'Command', 'Description']
     scripts = loadScripts()
-    for name, command in scripts.items():
-        print(f'{name} >>> {command}')
+    for name, data in scripts.items():
+        row = name, data["command"], data["description"]
+        cmds.add_row(row)
+    cmds.align = 'l'
+    print(cmds)
 
 
 @main.command()
@@ -60,24 +72,28 @@ def rm(**kwargs):
 
 @main.command()
 def install(**kwargs):
-    os.system('pip install -r requirements.txt')
+    runScriptDirectly('pip install -r requirements.txt')
 
 
 @main.command()
 def freeze(**kwargs):
-    os.system('pip3 freeze > requirements.txt')
+    runScriptDirectly('pip freeze > requirements.txt')
+
 
 @main.command()
 def build(**kwargs):
     runScript('build')
 
+
 @main.command()
 def start(**kwargs):
     runScript('start')
 
+
 @main.command()
 def deploy(**kwargs):
     runScript('deploy')
+
 
 if __name__ == '__main__':
     args = sys.argv
