@@ -5,7 +5,7 @@ with open("README.md","r") as fh:
 
 setuptools.setup(
     name="python-script-manager",
-    version="0.0.3",
+    version="0.0.4",
     author="YunisDEV",
     author_email="yunisdev.04@gmail.com",
     description="Run scripts easily...",
