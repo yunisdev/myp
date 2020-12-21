@@ -1,6 +1,1 @@
-{
-    "scripts": {
-        "hello": "echo Hello World!!!",
-        "push": "git push -u origin master"
-    }
-}
+{"scripts": {"push": "git push"}}
