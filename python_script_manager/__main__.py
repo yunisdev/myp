@@ -2,12 +2,14 @@ import sys
 import click
 try:
     from .funcs import *
+    from . import const
 except ImportError:
     from funcs import *
+    import const
 
 
 @click.group()
-@click.version_option("0.0.1")
+@click.version_option(const.version)
 def main():
     pass
 

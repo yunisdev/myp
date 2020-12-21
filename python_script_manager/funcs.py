@@ -41,6 +41,7 @@ def runScript(name):
     scripts = loadScripts()
     called_script = scripts.get(name, None)
     if called_script:
+        print(f'\t> {called_script}')
         os.system(called_script)
     else:
         raise Exception(f'Can not find script named "{name}"')

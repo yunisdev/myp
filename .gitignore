@@ -5,3 +5,4 @@ dist
 .vscode
 pyscripts.json
 __pycache__
+psm.json
