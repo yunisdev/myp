@@ -37,10 +37,10 @@ To create script, use `add` command.
 ```bash
 psm add
 ```
-It will ask you name and command for your script.
+It will ask you name, command and description (optional) for your script.
 You can also pass them as options
 ```bash
-psm add --name="Name of script" --command="Command"
+psm add --name="Name of script" --command="Command" --description="Description for script (optional)"
 ```
 
 #### List scripts
