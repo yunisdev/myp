@@ -11,7 +11,7 @@ pip3 install python-script-manager
 ```
 To make sure you have successfully installed it,
 ```bash
-psm --version
+psm
 ```
 
 ## Usage
