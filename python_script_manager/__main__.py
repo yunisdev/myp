@@ -4,8 +4,13 @@ import click
 from .basic import basic
 from .pip import pip
 
+commands = [
+    basic, 
+    pip
+]
 
-main = click.CommandCollection(sources=[basic, pip])
+
+main = click.CommandCollection(sources=commands)
 
 
 if __name__ == '__main__':

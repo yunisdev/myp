@@ -3,7 +3,6 @@ from .. import const
 from ..basic.funcs import runScriptDirectly
 
 @click.group()
-@click.version_option(const.version)
 def pip():
     pass
 
