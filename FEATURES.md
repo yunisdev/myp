@@ -1,4 +1,4 @@
-Click [here]('/') to go home page
+Click [here]() to go home page
 
 #### v.1.0.4
 - Bug fixes
