@@ -1,4 +1,4 @@
-theme: jekyll-theme-midnight
+remote_theme: pmarsceill/just-the-docs
 include:
  - README.md
  - CONTRIBUTION.md
