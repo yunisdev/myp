@@ -55,7 +55,8 @@ def list(**kwargs):
     cmds.field_names = ['Name', 'Command', 'Description']
     scripts = loadScripts()
     for name, data in scripts.items():
-        row = name, data["command"], data["description"]
+        print(data)
+        row = (name, data["command"], data["description"])
         cmds.add_row(row)
     cmds.align = 'l'
     print(cmds)

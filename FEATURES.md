@@ -1,3 +1,6 @@
+#### v.1.0.4
+- Bug fixes
+
 #### v1.0.3
 - Bug fixes
 - Table view for command list
