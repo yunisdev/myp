@@ -1,11 +1,8 @@
 import json
 import os
-try:
-    from . import const
-    from .templates import templates
-except ImportError:
-    import const
-    from templates import templates
+
+from .. import const
+from ..templates import templates
 
 
 def loadScripts():
@@ -18,11 +15,12 @@ def runScriptDirectly(script):
     os.system(script)
 
 
-def addScript(name, command,description=""):
+def addScript(name, command, description=""):
     with open(const.filename, 'rt') as s:
         data = json.load(s)
     with open(const.filename, 'wt') as s:
-        data['scripts'][name] = {"command":command,"description":description}
+        data['scripts'][name] = {
+            "command": command, "description": description}
         json.dump(data, s)
     print('Script added successfully.')
 
@@ -31,7 +29,8 @@ def initialize(template):
     schema = templates[template]
     with open(const.filename, 'wt') as s:
         json.dump(schema, s)
-    print('Successfully initialized '+const.filename+f' with {template} template.')
+    print('Successfully initialized ' +
+          const.filename+f' with {template} template.')
 
 
 def removeScript(name):

@@ -1,6 +1,10 @@
 Click [here]() to go home page
 
-#### v.1.0.4
+#### v1.0.5
+- File structure renewed
+- Help texts and descriptions
+
+#### v1.0.4
 - Bug fixes
 
 #### v1.0.3
