@@ -1,4 +1,4 @@
-Click [here]() to go home page
+Click [here](/python-script-manager) to go home page
 
 #### v1.0.5
 - File structure renewed
