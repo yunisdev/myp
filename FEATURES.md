@@ -2,6 +2,10 @@
 
 Click [here](/python-script-manager) to go home page
 
+#### v1.0.6
+
+-   Bug fixes on naming
+
 #### v1.0.5
 
 -   File structure renewed
