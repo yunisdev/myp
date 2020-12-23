@@ -4,16 +4,7 @@ import os
 from .. import const
 from ..templates import templates
 
-
-def loadScripts():
-    with open(const.filename, 'rt') as s:
-        return json.load(s)['scripts']
-
-
-def runScriptDirectly(script):
-    print(f'\n\t> {script}\n')
-    os.system(script)
-
+from ..globals import *
 
 def addScript(name, command, description=""):
     with open(const.filename, 'rt') as s:
@@ -47,7 +38,6 @@ def runScript(name):
     called_script = scripts.get(name, None)
     cmd = called_script["command"]
     if called_script:
-        print(f'\n\t> {cmd}\n')
-        os.system(cmd)
+        runScriptDirectly(cmd)
     else:
         raise Exception(f'Can not find script named "{name}"')
