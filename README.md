@@ -1,13 +1,11 @@
-<img src="assets/psm.svg"/> Welcome to PSM
-==========================================
+# <img src="assets/psm.svg"/> Welcome to PSM
 
 ## What is PSM?
 
 <b>PSM</b> (Python Script Manager) is a <b>script manager</b> for Python programming language. You can manage your scripts with this tool. You can create scripts, use them, delete them and etc. PSM gives you chance to call longer commands with shorter commands. I inspired by <b>npm scripts</b> to make Python version of it.
 Check out <a href="https://yunisdev.github.io/python-script-manager/FEATURES.html">New features</a> or <a href="https://yunisdev.github.io/python-script-manager/CONTRIBUTION.html">Contribution</a> documentation
 
-Installation
-============
+# Installation
 
 For install PSM you will need pip. I you have not click <a href="https://pip.pypa.io/en/stable/">here</a>
 After installing pip, enter command below.
@@ -22,8 +20,7 @@ To make sure you have successfully installed it,
 psm
 ```
 
-Usage
-=====
+# Usage
 
 First you need to initialize PSM in your directory.
 
