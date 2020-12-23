@@ -6,13 +6,13 @@ from ..basic.funcs import runScriptDirectly
 def pip():
     pass
 
-@pip.command()
-def install(**kwargs):
+@pip.command(name="install")
+def install_command(**kwargs):
     """Install dependencies in requirements.txt"""
     runScriptDirectly('pip install -r requirements.txt')
 
 
-@pip.command()
-def freeze(**kwargs):
+@pip.command(name="freeze")
+def freeze_command(**kwargs):
     """Output dependencies of project"""
     runScriptDirectly('pip freeze > requirements.txt')
