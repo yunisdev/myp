@@ -1,8 +1,10 @@
+Contribution
+============
 ## Want to contribute PSM?
-#### What you can do?
+### What you can do?
 - [Create new template for `init`](#create-template)
 - [Create new useful commands](#create-commands)
-
+----
 ### Create template
 For adding new template, go to `python_script_manager/templates` and create file with your template name (Example, `template.py`). After create dict with same name as template name.
 Example,
@@ -26,7 +28,7 @@ templates = {
 }
 
 ```
-
+----
 ### Create commands
 To create new commands, create new folder in `python_script_manager` folder named in your command group. For example, `hello`. After, create 3 files inside it. `__init__.py`, `commands.py` and `funcs.py`.
 In `commands.py`, create new group and commands.
