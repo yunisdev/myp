@@ -95,7 +95,9 @@ def start_command(**kwargs):
 @basic.command("deploy")
 def deploy_command(**kwargs):
     """Special script that will execute "psm run deploy" """
+    runScriptIfExist('predeploy')
     runScript('deploy')
+    runScriptIfExist('postdeploy')
 
 
 @basic.command(['set-version','setv'])

@@ -3,6 +3,7 @@ import json
 import os
 import click
 
+
 def loadScripts():
     with open(const.filename, 'rt') as s:
         return json.load(s)['scripts']
@@ -11,6 +12,27 @@ def loadScripts():
 def runScriptDirectly(script):
     print(f'\n\t> {script}\n')
     os.system(script)
+
+
+def runScriptIfExist(name):
+    scripts = loadScripts()
+    called_script = scripts.get(name, None)
+    if called_script:
+        cmd = called_script["command"]
+        runScriptDirectly(cmd)
+    else:
+        pass
+
+
+def runScript(name):
+    scripts = loadScripts()
+    called_script = scripts.get(name, None)
+    if called_script:
+        cmd = called_script["command"]
+        runScriptDirectly(cmd)
+    else:
+        raise Exception(f'Can not find script named "{name}"')
+
 
 class MultiCommand(click.Group):
     def command(self, *args, **kwargs):

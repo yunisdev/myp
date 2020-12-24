@@ -36,12 +36,3 @@ def removeScript(name):
         json.dump(data, s)
     print('Script removed successfully.')
 
-
-def runScript(name):
-    scripts = loadScripts()
-    called_script = scripts.get(name, None)
-    cmd = called_script["command"]
-    if called_script:
-        runScriptDirectly(cmd)
-    else:
-        raise Exception(f'Can not find script named "{name}"')
