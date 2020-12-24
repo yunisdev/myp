@@ -1,16 +1,27 @@
+def django_oninit():
+    pass
+
+
 django = {
-    "scripts":{
-        "start":{
-           "command":"python manage.py runserver",
-           "description":"Run Django server"
-        },
-        "mig":{
-            "command":"python manage.py migrate",
-            "description":"Migrate database"    
-        },
-        "mkmig":{
-            "command":"python manage.py makemigrations",
-            "description":"Make migrations"
+    "body": {
+        "scripts": {
+            "start": {
+                "command": "python manage.py runserver",
+                "description": "Run Django server"
+            },
+            "mig": {
+                "command": "python manage.py migrate",
+                "description": "Migrate database"
+            },
+            "mkmig": {
+                "command": "python manage.py makemigrations",
+                "description": "Make migrations"
+            }
+        }
+    },
+    "config": {
+        "events": {
+            "oninit": django_oninit
         }
     }
 }

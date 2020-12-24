@@ -119,6 +119,3 @@ Or you can output dependencies to `requirements.txt`
 ```bash
 psm freeze
 ```
-
-<b>Note:</b>
-You must install `python-script-manager` itself to your virtual environment too if you use virtual environment. Otherwise, it will work for system pip. For example, if you try to freeze, it will add all packages on system to `requirements.txt`

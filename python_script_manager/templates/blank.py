@@ -1,5 +1,15 @@
+def blank_oninit():
+    pass
+
 blank = {
-    "scripts":{
-        
+    "body": {
+        "scripts": {
+
+        }
+    },
+    "config":{
+        "events":{
+            "oninit":blank_oninit
+        }
     }
 }

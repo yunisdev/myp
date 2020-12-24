@@ -17,7 +17,7 @@ def addScript(name, command, description=""):
 
 
 def initialize(template):
-    schema = templates[template]
+    schema = templates[template]['body']
     with open(const.filename, 'wt') as s:
         json.dump(schema, s)
     print('Successfully initialized ' +
