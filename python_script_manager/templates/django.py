@@ -1,5 +1,5 @@
 def django_oninit():
-    pass
+    print("Thanks for using django template!!!")
 
 
 django = {
@@ -19,9 +19,5 @@ django = {
             }
         }
     },
-    "config": {
-        "events": {
-            "oninit": django_oninit
-        }
-    }
+    "oninit":django_oninit
 }

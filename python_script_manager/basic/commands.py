@@ -2,25 +2,30 @@ import click
 from prettytable import PrettyTable
 from .funcs import *
 from .. import const
+from ..globals import MultiCommand
 
 
-@click.group()
+@click.group(cls=MultiCommand)
 def basic():
     pass
 
 
 # Initialize psm
-@basic.command(name="init")
+@basic.command("init")
 @click.option('-t', '--template', 'template', default='blank', help="Name of template")
 @click.option('--files', is_flag=True, help='Init with file structure (if supported by template)')
+@click.option('--disable-oninit','disable_oninit',is_flag=True,help='Disable work of oninit event')
 def init_command(files, **kwargs):
     """Initialize PSM in current folder"""
     template = kwargs.pop('template')
-    initialize(template)
+    initialize(
+        template,
+        disable_oninit=kwargs.pop('disable_oninit')
+    )
 
 
 # Run script
-@basic.command(name="run")
+@basic.command("run")
 @click.argument('name', required=True)
 def run_command(**kwargs):
     """Run PSM script with NAME"""
@@ -31,7 +36,7 @@ def run_command(**kwargs):
 
 
 # Add script
-@basic.command(name="add")
+@basic.command("add")
 @click.option('-n', '--name', 'name', required=False, help="Name for new script")
 @click.option('-c', '--command', 'command', required=False, help="Command that script will used for")
 @click.option('-d', '--description', 'description', required=False, help="Description for new script (optional)")
@@ -50,7 +55,7 @@ def add_command(**kwargs):
 
 
 # List scripts
-@basic.command(name="list")
+@basic.command("list")
 def list_command(**kwargs):
     """Generate list of scripts as table"""
     cmds = PrettyTable()
@@ -64,7 +69,7 @@ def list_command(**kwargs):
 
 
 # Remove script
-@basic.command(name="rm")
+@basic.command("rm")
 @click.option('-n', '--name', 'name', required=False, help="Name of script to remove")
 def rm_command(**kwargs):
     """Remove script"""
@@ -75,19 +80,25 @@ def rm_command(**kwargs):
 
 
 # Special Scripts
-@basic.command(name="build")
+@basic.command("build")
 def build_command(**kwargs):
     """Special script that will execute "psm run build" """
     runScript('build')
 
 
-@basic.command(name="start")
+@basic.command("start")
 def start_command(**kwargs):
     """Special script that will execute "psm run start" """
     runScript('start')
 
 
-@basic.command(name="deploy")
+@basic.command("deploy")
 def deploy_command(**kwargs):
     """Special script that will execute "psm run deploy" """
     runScript('deploy')
+
+
+@basic.command(['set-version','setv'])
+def set_version_command(**kwargs):
+    """Set version number for your project"""
+    print('SET VERSION')

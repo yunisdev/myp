@@ -16,12 +16,16 @@ def addScript(name, command, description=""):
     print('Script added successfully.')
 
 
-def initialize(template):
-    schema = templates[template]['body']
+def initialize(template_name,disable_oninit = False):
+    template = templates[template_name]
+    schema = template['body']
+    oninit = template.get('oninit',None)
+    if oninit and not disable_oninit:
+        oninit()
     with open(const.filename, 'wt') as s:
         json.dump(schema, s)
     print('Successfully initialized ' +
-          const.filename+f' with {template} template.')
+          const.filename+f' with {template_name} template.')
 
 
 def removeScript(name):

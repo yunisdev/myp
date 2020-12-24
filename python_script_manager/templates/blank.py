@@ -6,10 +6,5 @@ blank = {
         "scripts": {
 
         }
-    },
-    "config":{
-        "events":{
-            "oninit":blank_oninit
-        }
     }
 }
