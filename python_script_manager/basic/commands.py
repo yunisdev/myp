@@ -2,7 +2,7 @@ import click
 from prettytable import PrettyTable
 from .funcs import *
 from .. import const
-from ..globals import MultiCommand
+from ..globals import MultiCommand, runScriptDirectly
 
 
 @click.group(cls=MultiCommand)
@@ -14,7 +14,7 @@ def basic():
 @basic.command("init")
 @click.option('-t', '--template', 'template', default='blank', help="Name of template")
 @click.option('--files', is_flag=True, help='Init with file structure (if supported by template)')
-@click.option('--disable-oninit','disable_oninit',is_flag=True,help='Disable work of oninit event')
+@click.option('--disable-oninit', 'disable_oninit', is_flag=True, help='Disable work of oninit event')
 def init_command(files, **kwargs):
     """Initialize PSM in current folder"""
     template = kwargs.pop('template')
@@ -100,7 +100,19 @@ def deploy_command(**kwargs):
     runScriptIfExist('postdeploy')
 
 
-@basic.command(['set-version','setv'])
+@basic.command(['set-version', 'setv'])
 def set_version_command(**kwargs):
     """Set version number for your project"""
     print('SET VERSION')
+
+
+@basic.command("workon")
+@click.argument('directory', required=True)
+def workon_command(**kwargs):
+    """Enable virtual environment"""
+    directory = kwargs.pop('directory')
+    import platform
+    if platform.system() == 'Windows':
+        runScriptDirectly(f'{directory}\\Scripts\\activate')
+    else:
+        runScriptDirectly('source venv/bin/activate')

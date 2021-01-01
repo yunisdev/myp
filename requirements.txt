@@ -1,3 +1,9 @@
+autopep8==1.5.4
 click==7.1.2
 prettytable==2.0.0
+pycodestyle==2.6.0
+python-script-manager==1.0.6
+termcolor==1.1.0
+termcolor2==0.0.3
+toml==0.10.2
 wcwidth==0.2.5

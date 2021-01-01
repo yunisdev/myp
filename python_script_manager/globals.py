@@ -3,6 +3,8 @@ import json
 import os
 import click
 
+from termcolor2 import c
+
 
 def loadScripts():
     with open(const.filename, 'rt') as s:
@@ -10,7 +12,7 @@ def loadScripts():
 
 
 def runScriptDirectly(script):
-    print(f'\n\t> {script}\n')
+    print('\n\t' + c('>').blue + c('>').yellow + f' {script}\n')
     os.system(script)
 
 
