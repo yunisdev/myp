@@ -2,6 +2,14 @@
 
 Click [here](/python-script-manager) to go home page
 
+#### v1.0.8
+- Bug fixes
+
+#### v1.0.7
+- Set version
+- Predeploy and postdeploy script support
+- importable PSMReader package
+
 #### v1.0.6
 
 -   Bug fixes on naming

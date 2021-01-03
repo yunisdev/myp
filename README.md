@@ -119,3 +119,26 @@ Or you can output dependencies to `requirements.txt`
 ```bash
 psm freeze
 ```
+
+## Project settings
+#### Setting version
+Optionally, you can define version for your project. If you are building python package, it is useful for versioning.
+To set new version:
+```bash
+psm setv
+# or
+psm set-version
+```
+It will not change, if you do not enter any value to input.
+To use version in `setup.py` for your packages, you can use `PSMReader` object.
+```python
+from python_script_manager.package import PSMReader
+
+psm = PSMReader('directory of psm.json')
+# in most cases, "psm.json" will work as directory
+
+setuptools.setup(
+    # ...
+    version=psm.get_version(),
+    # ...
+```

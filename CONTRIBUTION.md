@@ -15,14 +15,21 @@ For adding new template, go to `python_script_manager/templates` and create file
 Example,
 
 ```python
+def template_oninit():
+    print("Thanks for using our template!!!")
+
 template = {
-    "scripts":{
-        "start":{
-           "command":"START_COMMAND",
-           "description":"Start server"
+    "body": {
+        "scripts":{
+            "start":{
+                "command":"START_COMMAND",
+                "description":"Start server"
+            }
         }
-    }
+    },
+    "oninit":template_oninit
 }
+
 ```
 
 Don't forget to register your template to `__init__.py`
