@@ -33,7 +33,7 @@ def runScript(name):
         cmd = called_script["command"]
         runScriptDirectly(cmd)
     else:
-        raise Exception(f'Can not find script named "{name}"')
+        raise click.ClickException(f'Can not find script named "{name}"')
 
 
 class MultiCommand(click.Group):

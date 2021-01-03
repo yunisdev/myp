@@ -103,7 +103,15 @@ def deploy_command(**kwargs):
 @basic.command(['set-version', 'setv'])
 def set_version_command(**kwargs):
     """Set version number for your project"""
-    print('SET VERSION')
+    from ..package import PSMReader
+    psm = PSMReader(const.filename)
+    new_version = input(f'Enter new version number ({psm.data["version"]}): ')
+    old_version = psm.data["version"]
+    if new_version and new_version != old_version:
+        psm.data['version'] = new_version
+        psm.write()
+        print(f'Successfully updated version: {old_version} -> {new_version}')
+    
 
 
 @basic.command("workon")

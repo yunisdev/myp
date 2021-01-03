@@ -18,6 +18,7 @@ def addScript(name, command, description=""):
 def initialize(template_name,disable_oninit = False):
     template = templates[template_name]
     schema = template['body']
+    schema["version"] = '0.0.0'
     oninit = template.get('oninit',None)
     if oninit and not disable_oninit:
         oninit()
