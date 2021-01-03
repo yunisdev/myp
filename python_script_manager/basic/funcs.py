@@ -1,18 +1,19 @@
 import json
-
 from .. import const
 from ..templates import templates
-
+from ..package import PSMReader
 from ..globals import *
 
 def addScript(name, command, description=""):
-    with open(const.filename, 'rt') as s:
-        data = json.load(s)
-    with open(const.filename, 'wt') as s:
-        data['scripts'][name] = {
-            "command": command, "description": description}
-        json.dump(data, s)
+    psm = PSMReader()
+    psm.add_script(
+        name=name,
+        command=command,
+        description=description,
+    )
+    psm.write()
     print('Script added successfully.')
+
 
 
 def initialize(template_name,disable_oninit = False):
@@ -29,10 +30,8 @@ def initialize(template_name,disable_oninit = False):
 
 
 def removeScript(name):
-    with open(const.filename, 'rt') as s:
-        data = json.load(s)
-    with open(const.filename, 'wt') as s:
-        data['scripts'].pop(name)
-        json.dump(data, s)
+    psm = PSMReader()
+    psm.remove_script(name)
+    psm.write()
     print('Script removed successfully.')
 
