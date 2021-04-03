@@ -29,6 +29,12 @@ class PSMReader:
     def get_url(self):
         return self.data["url"]
 
+    def get_config(self):
+        return self.data.get("config",None)
+
+    def set_config(self,data):
+        self.data["config"] = data
+
     def add_script(self,name,command,description):
         self.data["scripts"][name] = {
             "command":command,
