@@ -12,12 +12,12 @@ def basic():
 
 # Initialize psm
 @basic.command("init")
-@click.option('-t', '--template', 'template', default='blank', help="Name of template")
+@click.option('-t', '--template', 'template', help="Name of template")
 @click.option('--files', is_flag=True, help='Init with file structure (if supported by template)')
 @click.option('--disable-oninit', 'disable_oninit', is_flag=True, help='Disable work of oninit event')
 def init_command(files, **kwargs):
     """Initialize PSM in current folder"""
-    template = kwargs.pop('template')
+    template = kwargs.pop('template') or input('Which template you wanna use? (blank): ') or 'blank'
     initialize(
         template,
         disable_oninit=kwargs.pop('disable_oninit')
@@ -50,7 +50,7 @@ def add_command(**kwargs):
     while not command:
         command = input('Enter command for script: ')
     if not description:
-        description = input('Enter description for script (optional):')
+        description = input('Enter description for script (optional): ')
     addScript(name, command, description)
 
 
@@ -100,7 +100,7 @@ def deploy_command(**kwargs):
     runScriptIfExist('postdeploy')
 
 
-@basic.command(['set-version', 'setv'])
+@basic.command(['set:version', 'set:v'])
 def set_version_command(**kwargs):
     """Set version number for your project"""
     from ..package import PSMReader
@@ -112,15 +112,3 @@ def set_version_command(**kwargs):
         psm.write()
         print(f'Successfully updated version: {old_version} -> {new_version}')
     
-
-
-@basic.command("workon")
-@click.argument('directory', required=True)
-def workon_command(**kwargs):
-    """Enable virtual environment"""
-    directory = kwargs.pop('directory')
-    import platform
-    if platform.system() == 'Windows':
-        runScriptDirectly(f'{directory}\\Scripts\\activate')
-    else:
-        runScriptDirectly('source venv/bin/activate')
