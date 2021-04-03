@@ -12,16 +12,15 @@ def parse_requirements(filename):
     return [line for line in lineiter if line and not line.startswith("#")]
 reqs = parse_requirements('requirements.txt')
 
-
 setuptools.setup(
-    name="python-script-manager",
+    name=psm.get_name(),
     version=psm.get_version(),
-    author="YunisDEV",
-    author_email="yunisdev.04@gmail.com",
-    description="Run scripts easily...",
+    author=psm.get_author(),
+    author_email=psm.get_author_email(),
+    description=psm.get_description(),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/YunisDEV/python-script-manager",
+    url=psm.get_url(),
     packages=setuptools.find_packages(),
     install_requires=reqs,
     classifiers=[
