@@ -1,4 +1,4 @@
-# <img src="assets/psm.svg"/> Welcome to PSM
+# <img src="https://raw.githubusercontent.com/YunisDEV/python-script-manager/master/assets/psm.svg"/> Welcome to PSM
 
 ## What is PSM?
 
