@@ -21,7 +21,7 @@ def initialize(template_name, disable_oninit=False):
     template = templates[template_name]
     schema = template['body']
     schema["version"] = '0.0.0'
-
+    schema["config"] = {}
     current_dir = os.path.basename(os.getcwd())
     schema["name"] = input(
         f'Project name ({current_dir}): ') or current_dir
