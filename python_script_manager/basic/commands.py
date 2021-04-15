@@ -30,12 +30,15 @@ def init_command(files, **kwargs):
     allow_extra_args=True,
 ))
 @click.argument('name', required=True)
-@click.argument('other_args', type=click.UNPROCESSED)
+@click.argument('other_args', type=click.UNPROCESSED,required=False)
 @click.pass_context
 def run_command(*args,**kwargs):
     """Run PSM script with NAME"""
     ctx = args[0]
-    other_arguments = (ctx.params["other_args"] + f""" "{' '.join(ctx.args)}" """) or ""
+    try:
+        other_arguments = (ctx.params["other_args"] + f""" "{' '.join(ctx.args)}" """) or ""
+    except Exception as e:
+        other_arguments = ""
     name = kwargs.pop('name')
     while not name:
         name = input('Enter name of script to run')
