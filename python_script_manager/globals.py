@@ -26,12 +26,12 @@ def runScriptIfExist(name):
         pass
 
 
-def runScript(name):
+def runScript(name,other_arguments=""):
     scripts = loadScripts()
     called_script = scripts.get(name, None)
     if called_script:
         cmd = called_script["command"]
-        runScriptDirectly(cmd)
+        runScriptDirectly(cmd.format(args=other_arguments))
     else:
         raise click.ClickException(f'Can not find script named "{name}"')
 

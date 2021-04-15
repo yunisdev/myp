@@ -25,14 +25,21 @@ def init_command(files, **kwargs):
 
 
 # Run script
-@basic.command("run")
+@basic.command("run",context_settings=dict(
+    ignore_unknown_options=True,
+    allow_extra_args=True,
+))
 @click.argument('name', required=True)
-def run_command(**kwargs):
+@click.argument('other_args', type=click.UNPROCESSED)
+@click.pass_context
+def run_command(*args,**kwargs):
     """Run PSM script with NAME"""
+    ctx = args[0]
+    other_arguments = (ctx.params["other_args"] + f""" "{' '.join(ctx.args)}" """) or ""
     name = kwargs.pop('name')
     while not name:
         name = input('Enter name of script to run')
-    runScript(name)
+    runScript(name,other_arguments=other_arguments)
 
 
 # Add script
