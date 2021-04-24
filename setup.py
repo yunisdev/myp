@@ -33,6 +33,6 @@ setuptools.setup(
     python_requires='>=3.6',
     entry_points='''
         [console_scripts]
-        psm=python_script_manager.__main__:main
+        psm=python_script_manager.__main__:cli
     ''',
 )

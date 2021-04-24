@@ -3,17 +3,21 @@ import click
 
 from .basic import basic
 from .pip import pip
+from .environment import environment
 
 commands = [
     basic, 
-    pip
+    pip,
+    environment
 ]
-
 
 main = click.CommandCollection(sources=commands)
 
-if __name__ == '__main__':
+def cli():
     args = sys.argv
     if "--help" in args or len(args) == 1:
         print("Python Script Manager")
-    main()
+    try:
+        main()
+    except Exception as e:
+        print("❌ "+str(e))

@@ -3,6 +3,7 @@ from prettytable import PrettyTable
 from .funcs import *
 from .. import const
 from ..globals import MultiCommand, runScriptDirectly
+from ..package import PSMReader
 
 
 @click.group(cls=MultiCommand)
@@ -17,7 +18,8 @@ def basic():
 @click.option('--disable-oninit', 'disable_oninit', is_flag=True, help='Disable work of oninit event')
 def init_command(files, **kwargs):
     """Initialize PSM in current folder"""
-    template = kwargs.pop('template') or input('Which template you wanna use? (blank): ') or 'blank'
+    template = kwargs.pop('template') or input(
+        'Which template you wanna use? (blank): ') or 'blank'
     initialize(
         template,
         disable_oninit=kwargs.pop('disable_oninit')
@@ -25,24 +27,28 @@ def init_command(files, **kwargs):
 
 
 # Run script
-@basic.command("run",context_settings=dict(
+@basic.command("run", context_settings=dict(
     ignore_unknown_options=True,
     allow_extra_args=True,
 ))
 @click.argument('name', required=True)
-@click.argument('other_args', type=click.UNPROCESSED,required=False)
+@click.argument('other_args', type=click.UNPROCESSED, required=False)
 @click.pass_context
-def run_command(*args,**kwargs):
+def run_command(*args, **kwargs):
     """Run PSM script with NAME"""
     ctx = args[0]
+    psm_obj = PSMReader()
+    if psm_obj.get_use_environment():
+        os.system('snakenv ' + psm_obj.get_environment())
     try:
-        other_arguments = (ctx.params["other_args"] + f""" "{' '.join(ctx.args)}" """) or ""
+        other_arguments = (
+            ctx.params["other_args"] + f""" "{' '.join(ctx.args)}" """) or ""
     except Exception as e:
         other_arguments = ""
     name = kwargs.pop('name')
     while not name:
         name = input('Enter name of script to run')
-    runScript(name,other_arguments=other_arguments)
+    runScript(name, other_arguments=other_arguments)
 
 
 # Add script
@@ -121,4 +127,3 @@ def set_version_command(**kwargs):
         psm.data['version'] = new_version
         psm.write()
         print(f'Successfully updated version: {old_version} -> {new_version}')
-    

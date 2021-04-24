@@ -22,6 +22,8 @@ def initialize(template_name, disable_oninit=False):
     schema = template['body']
     schema["version"] = '0.0.0'
     schema["config"] = {}
+    schema["environment"] = ""
+    schema["use_environment"] = True
     current_dir = os.path.basename(os.getcwd())
     schema["name"] = input(
         f'Project name ({current_dir}): ') or current_dir
@@ -31,7 +33,6 @@ def initialize(template_name, disable_oninit=False):
     schema["author"] = input('Author: ') or ""
     schema["author_email"] = input('Author e-mail: ') or ""
     schema["url"] = input('Url: ') or ""
-
     oninit = template.get('oninit', None)
     if oninit and not disable_oninit:
         oninit()
