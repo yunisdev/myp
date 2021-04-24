@@ -2,7 +2,7 @@ from . import const
 import json
 import os
 import click
-
+from .package import PSMReader
 from termcolor2 import c
 
 
@@ -13,7 +13,11 @@ def loadScripts():
 
 def runScriptDirectly(script):
     print('\n\t' + c('>').blue + c('>').yellow + f' {script}\n')
-    os.system(script)
+    psm_obj = PSMReader()
+    if psm_obj.get_use_environment():
+        os.system(f'snakenv {psm_obj.get_environment()} -c "{script}"')
+    else:
+        os.system(script)
 
 
 def runScriptIfExist(name):

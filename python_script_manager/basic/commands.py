@@ -38,8 +38,7 @@ def run_command(*args, **kwargs):
     """Run PSM script with NAME"""
     ctx = args[0]
     psm_obj = PSMReader()
-    if psm_obj.get_use_environment():
-        os.system('snakenv ' + psm_obj.get_environment())
+    
     try:
         other_arguments = (
             ctx.params["other_args"] + f""" "{' '.join(ctx.args)}" """) or ""
