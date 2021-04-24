@@ -30,10 +30,12 @@ psm init
 
 You can also start with template.
 
-#### Some of available templates:
+#### Available templates:
 
 -   blank
 -   django
+-   flaskmng
+-   pypi
 
 Example,
 
