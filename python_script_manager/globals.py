@@ -4,6 +4,7 @@ import os
 import click
 from .package import PSMReader
 from termcolor2 import c
+from PyInquirer import prompt
 
 
 def loadScripts():
@@ -58,3 +59,15 @@ class MultiCommand(click.Group):
                 *_args, **kwargs)(f)
             return cmd
         return decorator
+
+def take_input(text):
+    questions = [
+        {
+            'type':'input',
+            'name':'data',
+            'message':text
+        }
+    ]
+
+    answers = prompt(questions)
+    return answers['data']

@@ -2,3 +2,4 @@ termcolor2
 click
 prettytable
 snakenv
+PyInquirer

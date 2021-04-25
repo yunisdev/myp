@@ -3,6 +3,8 @@ from ..basic.funcs import runScriptDirectly
 from ..globals import MultiCommand
 from ..package import PSMReader
 
+from ..globals import take_input
+input = take_input
 
 @click.group(cls=MultiCommand)
 def environment():

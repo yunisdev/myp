@@ -5,6 +5,8 @@ from .. import const
 from ..globals import MultiCommand, runScriptDirectly
 from ..package import PSMReader
 
+from ..globals import take_input
+input = take_input
 
 @click.group(cls=MultiCommand)
 def basic():

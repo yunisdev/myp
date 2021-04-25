@@ -5,6 +5,8 @@ from ..package import PSMReader
 from ..globals import *
 import os
 
+from ..globals import take_input
+input = take_input
 
 def addScript(name, command, description=""):
     psm = PSMReader()
