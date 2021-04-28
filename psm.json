@@ -1,22 +1,26 @@
 {
+    "author": "YunisDEV",
+    "author_email": "yunisdev.04@gmail.com",
+    "config": {},
+    "dependencies": {
+        "common": [],
+        "dev": [],
+        "prod": []
+    },
+    "description": "Run scripts easily...",
+    "environment": "",
+    "name": "python-script-manager",
     "scripts": {
-        "predeploy": {
-            "command": "python setup.py sdist bdist_wheel",
-            "description": "Build package"
-        },
         "deploy": {
             "command": "python -m twine upload --skip-existing --repository-url https://upload.pypi.org/legacy/ dist/*",
             "description": "Upload to PYPI"
         },
-        "hello": {
-            "command": "echo Hello",
-            "description": ""
+        "predeploy": {
+            "command": "python setup.py sdist bdist_wheel",
+            "description": "Build package"
         }
     },
-    "version": "1.1.7",
-    "name": "python-script-manager",
-    "description": "Run scripts easily...",
-    "author": "YunisDEV",
-    "author_email": "yunisdev.04@gmail.com",
-    "url": "https://github.com/YunisDEV/python-script-manager#readme"
+    "url": "https://github.com/YunisDEV/python-script-manager#readme",
+    "use_environment": true,
+    "version": "1.1.8"
 }

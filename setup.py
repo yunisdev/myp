@@ -10,7 +10,7 @@ def parse_requirements(filename):
     """ load requirements from a pip requirements file """
     lineiter = (line.strip() for line in open(filename))
     return [line for line in lineiter if line and not line.startswith("#")]
-reqs = parse_requirements('pypi_requirements.txt')
+reqs = parse_requirements('requirements.txt')
 
 setuptools.setup(
     name=psm.get_name(),
