@@ -8,6 +8,7 @@ import os
 from ..globals import take_input
 input = take_input
 
+
 def addScript(name, command, description=""):
     psm = PSMReader()
     psm.add_script(
@@ -24,12 +25,13 @@ def initialize(template_name, disable_oninit=False):
     schema = template['body']
     schema["version"] = '0.0.0'
     schema["config"] = {}
+    schema["dependencies"] = {"prod": [], "common": [], "dev": []}
     schema["environment"] = ""
     schema["use_environment"] = True
     current_dir = os.path.basename(os.getcwd())
     schema["name"] = input(
         f'Project name ({current_dir}): ') or current_dir
-    
+
     schema["description"] = input('Description: ') or ""
 
     schema["author"] = input('Author: ') or ""
@@ -39,7 +41,7 @@ def initialize(template_name, disable_oninit=False):
     if oninit and not disable_oninit:
         oninit()
     with open(const.filename, 'wt') as s:
-        json.dump(schema, s)
+        json.dump(schema, s, indent=4, sort_keys=True)
     print('Successfully initialized ' +
           const.filename+f' with {template_name} template.')
 
