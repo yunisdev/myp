@@ -4,10 +4,10 @@
     "config": {},
     "dependencies": {
         "common": [
-            "prettytable",
-            "termcolor2",
-            "PyInquirer",
             "snakenv",
+            "prettytable",
+            "PyInquirer",
+            "termcolor2",
             "click"
         ],
         "dev": [],
