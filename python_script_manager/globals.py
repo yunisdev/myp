@@ -16,7 +16,7 @@ def runScriptDirectly(script):
     print('\n\t' + c('>').blue + c('>').yellow + f' {script}\n')
     psm_obj = PSMReader()
     if psm_obj.get_use_environment():
-        os.system(f'snakenv {psm_obj.get_environment()} -c "{script}" --not-create')
+        os.system(f'snakenv {psm_obj.get_environment()} -c "{script}"')
     else:
         os.system(script)
 

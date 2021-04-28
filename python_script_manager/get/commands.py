@@ -19,7 +19,7 @@ def get():
 def get_command(dev: bool, prod: bool, package_names: List[str]) -> None:
     psm: PSMReader = PSMReader()
     package_scope: str = "common"
-    if dev+prod < 2:
+    if dev+prod == 1:
         package_scope = "dev" if dev else "prod"
     psm.add_dependency(package_names, package_scope)
     runScriptDirectly(f'pip install {" ".join(package_names)}')
@@ -51,3 +51,4 @@ def get_load_from_reqs_command(dev: bool, prod: bool, file_name: str) -> None:
         reqs_scope = "dev" if dev else "prod"
     psm.add_dependency(reqs, reqs_scope)
     runScriptDirectly(f"pip install {' '.join(reqs)}")
+    psm.write()

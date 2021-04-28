@@ -3,7 +3,13 @@
     "author_email": "yunisdev.04@gmail.com",
     "config": {},
     "dependencies": {
-        "common": [],
+        "common": [
+            "prettytable",
+            "termcolor2",
+            "PyInquirer",
+            "snakenv",
+            "click"
+        ],
         "dev": [],
         "prod": []
     },
@@ -22,5 +28,5 @@
     },
     "url": "https://github.com/YunisDEV/python-script-manager#readme",
     "use_environment": true,
-    "version": "1.1.8"
+    "version": "1.1.9"
 }
