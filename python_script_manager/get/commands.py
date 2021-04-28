@@ -36,11 +36,18 @@ def get_deps_command(dev: bool, prod: bool) -> None:
     runScriptDirectly(f"pip install {' '.join(deps)}")
 
 
-@get.command("get:load-from-reqs")
+@get.command("get:load-from")
 @click.option('--dev', required=False, is_flag=True)
 @click.option('--prod', required=False, is_flag=True)
-def get_load_from_reqs_command(dev: bool, prod: bool) -> None:
+@click.argument('file_name', default='requirements.txt')
+def get_load_from_reqs_command(dev: bool, prod: bool, file_name: str) -> None:
     psm: PSMReader = PSMReader()
-    deps: List[str] = psm.get_dependencies(
-        "dev" if dev else ("prod" if prod else "all"))
-    runScriptDirectly(f"pip install {' '.join(deps)}")
+    def parse_requirements(filename):
+        lineiter = (line.strip() for line in open(filename))
+        return [line.split('==')[0] for line in lineiter if line and not line.startswith("#")]
+    reqs = parse_requirements(file_name)
+    reqs_scope = "common"
+    if dev+prod < 2:
+        reqs_scope = "dev" if dev else "prod"
+    psm.add_dependency(reqs, reqs_scope)
+    runScriptDirectly(f"pip install {' '.join(reqs)}")

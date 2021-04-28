@@ -1,10 +1,16 @@
 import setuptools
-from python_script_manager.package import PSMReader
+from python_script_manager import PSMReader
 
 with open("README.md","r") as fh:
     long_description = fh.read()
 
 psm = PSMReader('psm.json')
+
+def parse_requirements(filename):
+    """ load requirements from a pip requirements file """
+    lineiter = (line.strip() for line in open(filename))
+    return [line for line in lineiter if line and not line.startswith("#")]
+reqs = parse_requirements('pypi_requirements.txt')
 
 setuptools.setup(
     name=psm.get_name(),
@@ -23,7 +29,7 @@ setuptools.setup(
         "Topic :: Software Development",
         "Natural Language :: English"
     ],
-    install_requires=psm.get_dependencies("prod"),
-    setup_requires=psm.get_dependencies("prod"),
+    install_requires=reqs,
+    setup_requires=reqs,
     python_requires='>=3.6'
 )
