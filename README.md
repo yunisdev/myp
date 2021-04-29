@@ -7,5 +7,4 @@
 
 ## Learn more about PSM
 
-Full documentation is available at readthedocs:
-[python-script-manager.readthedocs.io](https://python-script-manager.readthedocs.io)
+Full documentation is available at [ReadTheDocs](https://python-script-manager.readthedocs.io).
