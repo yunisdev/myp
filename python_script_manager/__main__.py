@@ -1,19 +1,14 @@
 import sys
 import click
 
-from .basic import basic
-from .pip import pip
-from .environment import environment
-from .get import get
+@click.group()
+def main():
+    pass
 
-commands = [
-    basic, 
-    pip,
-    environment,
-    get
-]
-
-main = click.CommandCollection(sources=commands) # type: ignore
+from .basis import *
+from .scripts import *
+from .pip import *
+from .get import *
 
 def cli():
     args = sys.argv

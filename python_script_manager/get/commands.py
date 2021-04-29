@@ -1,55 +1,43 @@
 import click
-from ..basic.funcs import runScriptDirectly
-from ..globals import MultiCommand
-from ..package import PSMReader
 from typing import List
-from ..globals import take_input
-input = take_input
+from ..package import PSMReader
+from ..globals import runScriptDirectly, pip_cmd, parse_requirements
+from ..__main__ import main
 
 
-@click.group(cls=MultiCommand)
-def get():
-    pass
-
-
-@get.command("get")
-@click.option('--dev', required=False, is_flag=True)
-@click.option('--prod', required=False, is_flag=True)
+@main.command("get")
+@click.option('--dev', required=False, is_flag=True, help="Get packages as development dependency")
+@click.option('--prod', required=False, is_flag=True, help="Get packages as development dependency")
 @click.argument('package_names', required=True, nargs=-1)
 def get_command(dev: bool, prod: bool, package_names: List[str]) -> None:
+    """Get packages"""
     psm: PSMReader = PSMReader()
-    package_scope: str = "common"
-    if dev+prod == 1:
-        package_scope = "dev" if dev else "prod"
+    package_scope: str = "common" if dev+prod != 1 else ("prod" if prod else "dev")
     psm.add_dependency(package_names, package_scope)
-    runScriptDirectly(f'pip install {" ".join(package_names)}')
+    runScriptDirectly(pip_cmd(f"install {' '.join(package_names)}"))
     psm.write()
 
 
-@get.command("get:deps")
-@click.option('--dev', required=False, is_flag=True)
-@click.option('--prod', required=False, is_flag=True)
+@main.command("get:deps")
+@click.option('--dev', required=False, is_flag=True, help="Get packages as development dependency")
+@click.option('--prod', required=False, is_flag=True, help="Get packages as development dependency")
 def get_deps_command(dev: bool, prod: bool) -> None:
+    """Get packages in psm.json"""
     psm: PSMReader = PSMReader()
     deps: List[str] = psm.get_dependencies(
         "dev" if dev else ("prod" if prod else "all"))
-    runScriptDirectly(f"pip install {' '.join(deps)}")
+    runScriptDirectly(pip_cmd(f"install {' '.join(deps)}"))
 
 
-@get.command("get:load-from")
-@click.option('--dev', required=False, is_flag=True)
-@click.option('--prod', required=False, is_flag=True)
+@main.command("get:load-from")
+@click.option('--dev', required=False, is_flag=True, help="Get packages as development dependency")
+@click.option('--prod', required=False, is_flag=True, help="Get packages as development dependency")
 @click.argument('file_name', default='requirements.txt')
 def get_load_from_reqs_command(dev: bool, prod: bool, file_name: str) -> None:
+    """Get dependencies in requirements file"""
     psm: PSMReader = PSMReader()
-
-    def parse_requirements(filename):
-        lineiter = (line.strip() for line in open(filename))
-        return [line.split('==')[0] for line in lineiter if line and not line.startswith("#")]
-    reqs = parse_requirements(file_name)
-    reqs_scope = "common"
-    if dev+prod == 1:
-        reqs_scope = "dev" if dev else "prod"
+    reqs: List[str] = parse_requirements(file_name)
+    reqs_scope: str = "common" if dev+prod != 1 else ("prod" if prod else "dev")
     psm.add_dependency(reqs, reqs_scope)
-    runScriptDirectly(f"pip install {' '.join(reqs)}")
+    runScriptDirectly(pip_cmd(f"install {' '.join(reqs)}"))
     psm.write()

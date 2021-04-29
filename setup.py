@@ -7,14 +7,14 @@ with open("README.md","r") as fh:
 psm = PSMReader('psm.json')
 
 setuptools.setup(
-    name=psm.get_name(),
-    version=psm.get_version(),
-    author=psm.get_author(),
-    author_email=psm.get_author_email(),
-    description=psm.get_description(),
+    name=psm.get_data("name"),
+    version=psm.get_data("version"),
+    author=psm.get_data("author"),
+    author_email=psm.get_data("author_email"),
+    description=psm.get_data("description"),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=psm.get_url(),
+    url=psm.get_data("url"),
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -1,18 +1,14 @@
-import click
-from .. import const
-from ..basic.funcs import runScriptDirectly
+from ..__main__ import main
+from ..globals import runScriptDirectly, pip_cmd
 
-@click.group()
-def pip():
-    pass
 
-@pip.command(name="install")
-def install_command(**kwargs):
+@main.command("install")
+def install_command():
     """Install dependencies in requirements.txt"""
-    runScriptDirectly('pip install -r requirements.txt')
+    runScriptDirectly(pip_cmd(f"install -r requirements.txt"))
 
 
-@pip.command(name="freeze")
-def freeze_command(**kwargs):
-    """Output dependencies of project"""
-    runScriptDirectly('pip freeze > requirements.txt')
+@main.command("freeze")
+def freeze_command():
+    """Output dependencies of project to requirements.txt"""
+    runScriptDirectly(pip_cmd(f"freeze > requirements.txt"))

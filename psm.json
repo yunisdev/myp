@@ -10,7 +10,13 @@
             "termcolor2",
             "click"
         ],
-        "dev": [],
+        "dev": [
+            "wheel",
+            "pep8",
+            "setuptools",
+            "twine",
+            "autopep8"
+        ],
         "prod": []
     },
     "description": "Run scripts easily...",

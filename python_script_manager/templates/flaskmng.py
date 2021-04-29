@@ -10,7 +10,7 @@ flaskmng = {
                 "description":"Removing app from project."
             },
             "mkmig":{
-                "command":"flask db migrate {args}",
+                "command":"flask db migrate -m \"{m}\"",
                 "description":"Make migrations for project."
             },
             "mig":{
