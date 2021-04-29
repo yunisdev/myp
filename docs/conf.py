@@ -57,6 +57,5 @@ html_theme = 'insegel'
 html_static_path = ['_static']
 html_logo = "psm.svg"
 html_theme_options = {
-    'logo_only': True,
-    'display_version': False,
+    'display_version': False
 }
