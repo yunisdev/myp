@@ -11,10 +11,11 @@
             "click"
         ],
         "dev": [
-            "wheel",
-            "pep8",
             "setuptools",
+            "wheel",
             "twine",
+            "pep8",
+            "sphinx",
             "autopep8"
         ],
         "prod": []
