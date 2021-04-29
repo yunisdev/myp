@@ -5,7 +5,7 @@
 
 Welcome to python-script-manager's documentation!
 =================================================
-`Github repository <https://github.com/kritibytes/flaskmng>`_
+`Github repository <https://github.com/yunisdev/python-script-manager>`_
 
 What is PSM?
 #################
