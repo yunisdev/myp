@@ -20,7 +20,7 @@
         ],
         "prod": []
     },
-    "description": "Run scripts easily...",
+    "description": "Manage and develop your Python apps easily.",
     "environment": "",
     "name": "python-script-manager",
     "scripts": {
