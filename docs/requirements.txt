@@ -1,4 +1,4 @@
 sphinx
 sphinx-click
 python-script-manager
-sphinx-rtd-theme
+insegel
