@@ -72,7 +72,7 @@ def process_unknown_options(args: List[str]) -> dict:
 
 def pip_cmd(cmd:str) -> str:
     import sys
-    return f"{sys.executable} -m pip {cmd}"
+    return f"pip {cmd}"
 
 def parse_requirements(filename):
     lineiter = (line.strip() for line in open(filename))
