@@ -13,7 +13,7 @@ from .get import *
 def cli():
     args = sys.argv
     if "--help" in args or len(args) == 1:
-        print("Python Script Manager")
+        print("ManageYourPython")
     try:
         main()
     except Exception as e:

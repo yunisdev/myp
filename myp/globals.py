@@ -2,22 +2,22 @@ from . import const
 import json
 import os
 import click
-from .package import PSMReader
+from .package import MYPReader
 from termcolor2 import c
 from PyInquirer import prompt
 from typing import List
 
 
 def loadScripts() -> dict:
-    psm = PSMReader()
-    return psm.get_data("scripts")
+    myp = MYPReader()
+    return myp.get_data("scripts")
 
 
 def runScriptDirectly(script:str):
     click.echo('\n\t' + c('>').blue + c('>').yellow + f' {script}\n')
-    psm_obj = PSMReader()
-    if psm_obj.get_data("use_environment"):
-        os.system(f'snakenv {psm_obj.get_data("environment")} -c "{script}"')
+    myp_obj = MYPReader()
+    if myp_obj.get_data("use_environment"):
+        os.system(f'snakenv {myp_obj.get_data("environment")} -c "{script}"')
     else:
         os.system(script)
 

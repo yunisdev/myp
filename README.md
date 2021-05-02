@@ -1,10 +1,10 @@
-[![Documentation Status](https://readthedocs.org/projects/python-script-manager/badge/?version=latest)](https://python-script-manager.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/myp/badge/?version=latest)](myp.readthedocs.io/en/latest/?badge=latest)
 
-# <img src="https://raw.githubusercontent.com/YunisDEV/python-script-manager/master/assets/psm.svg"/> Welcome to PSM
+# <img src="https://raw.githubusercontent.com/YunisDEV/myp/master/assets/myp.svg"/> ManageYourPython
 
-## What is PSM?
-**PSM** is a tool that helps you to manage and develop your Python apps easily.
+## What is MYP?
+**myp** is a tool that helps you to manage and develop your Python apps easily.
 
-## Learn more about PSM
+## Learn more about MYP
 
-Full documentation is available at [ReadTheDocs](https://python-script-manager.readthedocs.io).
+Full documentation is available at [ReadTheDocs](https://myp.readthedocs.io).

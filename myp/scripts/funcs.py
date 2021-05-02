@@ -1,18 +1,18 @@
-from ..package import PSMReader
+from ..package import MYPReader
 
 def addScript(name: str, command: str, description: str = ""):
-    psm = PSMReader()
-    psm.add_script(
+    myp = MYPReader()
+    myp.add_script(
         name=name,
         command=command,
         description=description,
     )
-    psm.write()
+    myp.write()
     print('Script added successfully.')
 
 
 def removeScript(name: str):
-    psm = PSMReader()
-    psm.remove_script(name)
-    psm.write()
+    myp = MYPReader()
+    myp.remove_script(name)
+    myp.write()
     print('Script removed successfully.')

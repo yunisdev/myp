@@ -3,7 +3,7 @@ from typing import List, Any
 from .. import const
 
 
-class PSMReader:
+class MYPReader:
     data: dict
     file_name: str
 

@@ -1,20 +1,20 @@
 import setuptools
-from python_script_manager import PSMReader
+from myp import MYPReader
 
 with open("README.md","r") as fh:
     long_description = fh.read()
 
-psm = PSMReader('psm.json')
+myp = MYPReader()
 
 setuptools.setup(
-    name=psm.get_data("name"),
-    version=psm.get_data("version"),
-    author=psm.get_data("author"),
-    author_email=psm.get_data("author_email"),
-    description=psm.get_data("description"),
+    name=myp.get_data("name"),
+    version=myp.get_data("version"),
+    author=myp.get_data("author"),
+    author_email=myp.get_data("author_email"),
+    description=myp.get_data("description"),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=psm.get_data("url"),
+    url=myp.get_data("url"),
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -23,7 +23,11 @@ setuptools.setup(
         "Topic :: Software Development",
         "Natural Language :: English"
     ],
-    install_requires=psm.get_dependencies("prod"),
-    setup_requires=psm.get_dependencies("prod"),
-    python_requires='>=3.6'
+    install_requires=myp.get_dependencies("prod"),
+    setup_requires=myp.get_dependencies("prod"),
+    python_requires='>=3.6',
+    entry_points='''
+        [console_scripts]
+        myp=myp.__main__:cli
+    ''',
 )

@@ -1,5 +1,5 @@
 {
-    "author": "YunisDEV",
+    "author": "yunisdev",
     "author_email": "yunisdev.04@gmail.com",
     "config": {},
     "dependencies": {
@@ -20,9 +20,9 @@
         ],
         "prod": []
     },
-    "description": "Manage and develop your Python apps easily.",
+    "description": "Manage your Python apps easily.",
     "environment": "",
-    "name": "python-script-manager",
+    "name": "myp",
     "scripts": {
         "deploy": {
             "command": "python -m twine upload --skip-existing --repository-url https://upload.pypi.org/legacy/ dist/*",
@@ -33,7 +33,7 @@
             "description": "Build package"
         }
     },
-    "url": "https://github.com/YunisDEV/python-script-manager#readme",
+    "url": "https://github.com/yunisdev/myp#readme",
     "use_environment": true,
-    "version": "1.3.3"
+    "version": "1.3.4"
 }

@@ -20,7 +20,7 @@ from ..__main__ import main
 @click.argument('name', required=True)
 @click.pass_context
 def run_command(ctx: click.Context, name: str):
-    """Run PSM script with NAME"""
+    """Run MYP script with NAME"""
     runScript(name, unknown_options=process_unknown_options(ctx.__dict__["args"]))
 
 
@@ -59,26 +59,26 @@ def rm_command(name: str):
 # Special Scripts
 @main.command("build")
 def build_command():
-    """Special script that will execute "psm run build" """
+    """Special script that will execute "myp run build" """
     runScript('build')
 
 
 @main.command("test")
 def test_command():
-    """Special script that will execute "psm run test" """
+    """Special script that will execute "myp run test" """
     runScript('test')
 
 
 @main.command("start")
 def start_command():
-    """Special script that will execute "psm run start" """
+    """Special script that will execute "myp run start" """
     runScript('start')
 
 
 @main.command("deploy")
 @click.option('-b', '--build', 'build', is_flag=True, help="Build before deploy")
 def deploy_command(build: bool):
-    """Special script that will execute "psm run deploy" """
+    """Special script that will execute "myp run deploy" """
     if build:
         runScript('build')
     runScriptIfExist('predeploy')
