@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.org/projects/myp/badge/?version=latest)](myp.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/myp/badge/?version=latest)](myp.readthedocs.io/en/latest/?badge=latest) [![Pylint](https://github.com/yunisdev/myp/actions/workflows/pylint.yml/badge.svg)](https://github.com/yunisdev/myp/actions/workflows/pylint.yml)
 
 # <img height="24" width="24" src="https://raw.githubusercontent.com/YunisDEV/myp/master/docs/myp_icon.svg"/> ManageYourPython
 
