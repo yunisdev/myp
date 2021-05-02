@@ -1,3 +1,4 @@
+"""Setup file for myp"""
 import setuptools
 from myp import MYPReader
 
