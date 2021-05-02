@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   version="1.1"
+   viewBox="0 0 8.4666664 8.4666667"
+   id="svg841"
+   sodipodi:docname="myp_icon.svg"
+   inkscape:version="1.0.2 (394de47547, 2021-03-26)"
+   inkscape:export-filename="/home/yunisdev/Documents/Programming/Python/Pypi/myp/docs/myp_icon.png"
+   inkscape:export-xdpi="95"
+   inkscape:export-ydpi="95">
+  <defs
+     id="defs845" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     id="namedview843"
+     showgrid="false"
+     inkscape:zoom="7.2331135"
+     inkscape:cx="59.460964"
+     inkscape:cy="31.513295"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg841"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata833">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g856"
+     transform="matrix(0.12721743,0,0,0.1033016,-1.2126732,1.5001451)"
+     style="stroke-width:8.95504;stroke-miterlimit:4;stroke-dasharray:none">
+    <path
+       d="M 16.72373,5.285803 43.133554,26.458332 16.72373,47.630863"
+       stroke="#4b8bbe"
+       stroke-width="0.952498"
+       id="path835"
+       style="fill:none;stroke-width:8.95504;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="M 42.484013,5.285803 68.893839,26.458332 42.484013,47.630863"
+       stroke="#ffd43b"
+       stroke-width="0.952498"
+       id="path837"
+       style="fill:none;stroke-width:8.95504;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+</svg>
