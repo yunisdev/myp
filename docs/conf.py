@@ -17,13 +17,15 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'myp'
-copyright = '2021, yunisdev'
-author = 'yunisdev'
+from myp import MYPReader
+myp_obj = MYPReader('../myp.json')
+
+project = myp_obj.get_data("name")
+copyright = f'2021, {myp_obj.get_data("author")}'
+author = myp_obj.get_data("author")
 
 # The full version, including alpha/beta/rc tags
-from myp import MYPReader
-release = MYPReader("../myp.json").get_data("version")
+release = myp_obj.get_data("version")
 
 
 # -- General configuration ---------------------------------------------------
