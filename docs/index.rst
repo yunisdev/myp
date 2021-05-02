@@ -6,9 +6,14 @@
 Welcome to myp's documentation!
 ===============================
 
-API Reference
-#############
+**MYP** is a tool that helps you to manage and develop your Python apps easily.
 
-.. click:: myp.__main__:main
-   :prog: myp
-   :nested: full
+
+References
+----------
+
+.. toctree::
+   :maxdepth: 3
+
+   API Reference <api_reference>
+   MYPReader object <mypreader>
