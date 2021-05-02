@@ -22,7 +22,8 @@ copyright = '2021, yunisdev'
 author = 'yunisdev'
 
 # The full version, including alpha/beta/rc tags
-release = '1.3.5'
+from myp import MYPReader
+release = MYPReader("../myp.json").get_data("version")
 
 
 # -- General configuration ---------------------------------------------------
