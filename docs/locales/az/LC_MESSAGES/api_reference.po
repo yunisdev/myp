@@ -19,27 +19,27 @@ msgstr ""
 
 #: ../../api_reference.rst:2
 msgid "API Reference"
-msgstr ""
+msgstr "API Referansı"
 
 #: ../../myp add:1
 msgid "Add new script"
-msgstr ""
+msgstr "Yeni skript əlavə et"
 
 #: ../../api_reference.rst
 msgid "Options"
-msgstr ""
+msgstr "Seçimlər"
 
 #: ../../myp add:1
 msgid "Name for new script"
-msgstr ""
+msgstr "Yeni skript üçün ad"
 
 #: ../../myp add:1
 msgid "Command that script will used for"
-msgstr ""
+msgstr "Skriptin istifadə ediləcəyi əmr"
 
 #: ../../myp add:1
 msgid "Description for new script (optional)"
-msgstr ""
+msgstr "Yeni skript üçün təsvir (istəyə bağlı)"
 
 #: ../../myp build:1
 msgid "Special script that will execute \"myp run build\""

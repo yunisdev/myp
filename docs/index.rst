@@ -9,7 +9,7 @@ Welcome to myp's documentation!
 **MYP** is a tool that helps you to manage and develop your Python apps easily.
 
 
-References
+Contents:
 ----------
 
 .. toctree::
