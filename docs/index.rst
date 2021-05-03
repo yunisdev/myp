@@ -9,8 +9,8 @@ Welcome to myp's documentation!
 **MYP** is a tool that helps you to manage and develop your Python apps easily.
 
 
-Contents:
-----------
+Contents
+--------
 
 .. toctree::
    :maxdepth: 3

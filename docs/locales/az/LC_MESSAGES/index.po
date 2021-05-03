@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: myp \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-03 15:58+0400\n"
+"POT-Creation-Date: 2021-05-03 19:14+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,9 @@ msgstr ""
 "edən alətdir."
 
 #: ../../index.rst:13
-msgid "Contents:"
-msgstr "Kontentlər:"
+#, fuzzy
+msgid "Contents"
+msgstr "Kontentlər"
 
 #~ msgid "References"
 #~ msgstr "Referanslar"
