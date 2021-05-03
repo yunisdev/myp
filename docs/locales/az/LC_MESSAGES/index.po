@@ -19,23 +19,25 @@ msgstr ""
 
 #: ../../index.rst:15
 msgid "API Reference"
-msgstr ""
+msgstr "API Referansı"
 
 #: ../../index.rst:15
 msgid "MYPReader object"
-msgstr ""
+msgstr "MYPReader obyekti"
 
 #: ../../index.rst:7
 msgid "Welcome to myp's documentation!"
-msgstr ""
+msgstr "myp-nin dokumentasiyasına xoş gəlmisiniz!"
 
 #: ../../index.rst:9
 msgid ""
 "**MYP** is a tool that helps you to manage and develop your Python apps "
 "easily."
 msgstr ""
+"**MYP** Python applikasiyalarınızı asanlıqla inkişaf etdirmənizə kömək edən alətdir."
+""
 
 #: ../../index.rst:13
 msgid "References"
-msgstr ""
+msgstr "Referanslar"
 
