@@ -19,41 +19,41 @@ msgstr ""
 
 #: ../../mypreader.rst:2
 msgid "MYPReader object"
-msgstr ""
+msgstr "MYPReader obyekti"
 
 #: ../../mypreader.rst:4
 msgid "MYPReader is an instance to read data from `myp.json` file."
-msgstr ""
+msgstr "MYPReader `myp.json` faylındakı məlumatları oxumaq üçün obyektdir."
 
 #: ../../mypreader.rst:6
 msgid "API Reference for `MYPReader`"
-msgstr ""
+msgstr "`MYPReader` üçün API Referansı"
 
 #: myp.package.reader.MYPReader.get_data:1 of
 msgid "Get data from object"
-msgstr ""
+msgstr "Obyektdən məlumat əldə et"
 
 #: myp.package.reader.MYPReader.set_data:1 of
 msgid "Set data to object"
-msgstr ""
+msgstr "Obyektdəki məlumatı dəyişdir"
 
 #: myp.package.reader.MYPReader.write:1 of
 msgid "Write object instance to `myp.json`"
-msgstr ""
+msgstr "Obyekti `myp.json` faylına yazdır"
 
 #: myp.package.reader.MYPReader.add_script:1 of
 msgid "Add script to object"
-msgstr ""
+msgstr "Obyektə skript əlavə et"
 
 #: myp.package.reader.MYPReader.remove_script:1 of
 msgid "Remove script from object"
-msgstr ""
+msgstr "Obyektdən skript sil"
 
 #: myp.package.reader.MYPReader.add_dependency:1 of
 msgid "Add dependency to object"
-msgstr ""
+msgstr "Obyektə asılılıq əlavə et"
 
 #: myp.package.reader.MYPReader.get_dependencies:1 of
 msgid "Get dependencies of object"
-msgstr ""
+msgstr "Obyektdəki asılılıqları əldə et"
 
