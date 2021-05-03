@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, yunisdev
+# This file is distributed under the same license as the myp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: myp \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-03 15:31+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../api_reference.rst:2
+msgid "API Reference"
+msgstr ""
+
+#: ../../myp add:1
+msgid "Add new script"
+msgstr ""
+
+#: ../../api_reference.rst
+msgid "Options"
+msgstr ""
+
+#: ../../myp add:1
+msgid "Name for new script"
+msgstr ""
+
+#: ../../myp add:1
+msgid "Command that script will used for"
+msgstr ""
+
+#: ../../myp add:1
+msgid "Description for new script (optional)"
+msgstr ""
+
+#: ../../myp build:1
+msgid "Special script that will execute \"myp run build\""
+msgstr ""
+
+#: ../../myp deploy:1
+msgid "Special script that will execute \"myp run deploy\""
+msgstr ""
+
+#: ../../myp deploy:1
+msgid "Build before deploy"
+msgstr ""
+
+#: ../../myp freeze:1
+msgid "Output dependencies of project to requirements.txt"
+msgstr ""
+
+#: ../../myp get:1
+msgid "Get packages"
+msgstr ""
+
+#: ../../myp get:1 get:deps:1 get:load-from:1
+msgid "Get packages as development dependency"
+msgstr ""
+
+#: ../../myp get:1 get:deps:1 get:load-from:1
+msgid "Get packages as production dependency"
+msgstr ""
+
+#: ../../api_reference.rst
+msgid "Arguments"
+msgstr ""
+
+#: ../../myp get:1
+msgid "Required argument(s)"
+msgstr ""
+
+#: ../../myp get:deps:1
+msgid "Get packages in myp.json"
+msgstr ""
+
+#: ../../myp get:load-from:1
+msgid "Get dependencies in requirements file"
+msgstr ""
+
+#: ../../myp get:load-from:1
+msgid "Optional argument"
+msgstr ""
+
+#: ../../myp init:1
+msgid "Initialize MYP in current folder"
+msgstr ""
+
+#: ../../myp init:1
+msgid "Name of template"
+msgstr ""
+
+#: ../../myp init:1
+msgid "Disable work of oninit event"
+msgstr ""
+
+#: ../../myp install:1
+msgid "Install dependencies in requirements.txt"
+msgstr ""
+
+#: ../../myp list:1
+msgid "Generate list of scripts as table"
+msgstr ""
+
+#: ../../myp rm:1
+msgid "Remove script"
+msgstr ""
+
+#: ../../myp rm:1
+msgid "**Required** Name of script to remove"
+msgstr ""
+
+#: ../../myp run:1
+msgid "Run MYP script with NAME"
+msgstr ""
+
+#: ../../myp run:1 set:1 show:1
+msgid "Required argument"
+msgstr ""
+
+#: ../../myp set:1
+msgid "Set value of key in myp.json"
+msgstr ""
+
+#: ../../myp set:1
+msgid "Value to assing to key"
+msgstr ""
+
+#: ../../myp show:1
+msgid "Show value of key in myp.json"
+msgstr ""
+
+#: ../../myp start:1
+msgid "Special script that will execute \"myp run start\""
+msgstr ""
+
+#: ../../myp test:1
+msgid "Special script that will execute \"myp run test\""
+msgstr ""
+
