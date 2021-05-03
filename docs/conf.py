@@ -33,6 +33,10 @@ release = myp_obj.get_data("version")
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
+locale_dirs = ['locales/']   #for example
+gettext_compact = False     #optional
+
 extensions = [
     'sphinx_click',
     'sphinx.ext.autodoc'
