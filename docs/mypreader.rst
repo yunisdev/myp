@@ -3,6 +3,8 @@ MYPReader object
 
 MYPReader is an instance to read data from `myp.json` file.
 
+API Reference for `MYPReader`
+
 .. autoclass:: myp.MYPReader
 
     .. automethod:: get_data

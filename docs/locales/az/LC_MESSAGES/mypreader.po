@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: myp \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-03 15:31+0400\n"
+"POT-Creation-Date: 2021-05-03 19:56+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 
 #: ../../mypreader.rst:4
 msgid "MYPReader is an instance to read data from `myp.json` file."
+msgstr ""
+
+#: ../../mypreader.rst:6
+msgid "API Reference for `MYPReader`"
 msgstr ""
 
 #: myp.package.reader.MYPReader.get_data:1 of
