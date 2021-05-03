@@ -43,105 +43,105 @@ msgstr "Yeni skript üçün təsvir (istəyə bağlı)"
 
 #: ../../myp build:1
 msgid "Special script that will execute \"myp run build\""
-msgstr ""
+msgstr "\"myp run build\" əmrini çalışdıran xüsusi skript"
 
 #: ../../myp deploy:1
 msgid "Special script that will execute \"myp run deploy\""
-msgstr ""
+msgstr "\"myp run deploy\" əmrini çalışdıran xüsusi skript"
 
 #: ../../myp deploy:1
 msgid "Build before deploy"
-msgstr ""
+msgstr "Deploy prosesindən əvvəl build prosesini çalışdır"
 
 #: ../../myp freeze:1
 msgid "Output dependencies of project to requirements.txt"
-msgstr ""
+msgstr "Asılılıqları requirements.txt faylına yaz"
 
 #: ../../myp get:1
 msgid "Get packages"
-msgstr ""
+msgstr "Paketləri əldə et"
 
 #: ../../myp get:1 get:deps:1 get:load-from:1
 msgid "Get packages as development dependency"
-msgstr ""
+msgstr "Paketləri development asılılığı kimi əldə et"
 
 #: ../../myp get:1 get:deps:1 get:load-from:1
 msgid "Get packages as production dependency"
-msgstr ""
+msgstr "Paketləri production asılılığı kimi əldə et"
 
 #: ../../api_reference.rst
 msgid "Arguments"
-msgstr ""
+msgstr "Arqumentlər"
 
 #: ../../myp get:1
 msgid "Required argument(s)"
-msgstr ""
+msgstr "Tələb olunan arqument(lər)"
 
 #: ../../myp get:deps:1
 msgid "Get packages in myp.json"
-msgstr ""
+msgstr "myp.json faylındakı paketləri əldə et"
 
 #: ../../myp get:load-from:1
 msgid "Get dependencies in requirements file"
-msgstr ""
+msgstr "Paketləri requirements faylından əldə et"
 
 #: ../../myp get:load-from:1
 msgid "Optional argument"
-msgstr ""
+msgstr "İstəyə bağlı arqument"
 
 #: ../../myp init:1
 msgid "Initialize MYP in current folder"
-msgstr ""
+msgstr "Hazırki qovluqda MYP-ni başlat"
 
 #: ../../myp init:1
 msgid "Name of template"
-msgstr ""
+msgstr "Şablonun adı"
 
 #: ../../myp init:1
 msgid "Disable work of oninit event"
-msgstr ""
+msgstr "oninit event-ini dayandır"
 
 #: ../../myp install:1
 msgid "Install dependencies in requirements.txt"
-msgstr ""
+msgstr "requirements.txt faylındakı asılılıqları yüklə"
 
 #: ../../myp list:1
 msgid "Generate list of scripts as table"
-msgstr ""
+msgstr "Skriptləri cədvəl kimi göstər"
 
 #: ../../myp rm:1
 msgid "Remove script"
-msgstr ""
+msgstr "Skripti sil"
 
 #: ../../myp rm:1
 msgid "**Required** Name of script to remove"
-msgstr ""
+msgstr "**Məcburi** Silinməli olan skriptin adı"
 
 #: ../../myp run:1
 msgid "Run MYP script with NAME"
-msgstr ""
+msgstr "AD ilə MYP skriptini işlə sal"
 
 #: ../../myp run:1 set:1 show:1
 msgid "Required argument"
-msgstr ""
+msgstr "Tələb olunan arqument"
 
 #: ../../myp set:1
 msgid "Set value of key in myp.json"
-msgstr ""
+msgstr "myp.json faylının açarının dəyərini dəyişdir"
 
 #: ../../myp set:1
 msgid "Value to assing to key"
-msgstr ""
+msgstr "Açara veriləcək dəyər"
 
 #: ../../myp show:1
 msgid "Show value of key in myp.json"
-msgstr ""
+msgstr "Açarın myp.json faylındakı dəyərini göstər"
 
 #: ../../myp start:1
 msgid "Special script that will execute \"myp run start\""
-msgstr ""
+msgstr "\"myp run start\" əmrini çalışdıran xüsusi skript"
 
 #: ../../myp test:1
 msgid "Special script that will execute \"myp run test\""
-msgstr ""
+msgstr "\"myp run test\" əmrini çalışdıran xüsusi skript"
 
