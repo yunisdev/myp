@@ -4,11 +4,11 @@
     "config": {},
     "dependencies": {
         "common": [
+            "click",
             "snakenv",
-            "prettytable",
             "PyInquirer",
             "termcolor2",
-            "click"
+            "prettytable"
         ],
         "dev": [
             "wheel",
@@ -17,6 +17,7 @@
             "autopep8",
             "furo",
             "sphinx-click",
+            "sphinx-intl",
             "twine",
             "pep8"
         ],
