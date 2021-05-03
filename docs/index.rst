@@ -10,7 +10,6 @@ Welcome to myp's documentation!
 
 
 Contents
---------
 
 .. toctree::
    :maxdepth: 3
