@@ -14,5 +14,6 @@
 ## Learn more about MYP
 
 Full documentation is available at languages below:
+
 - [English](https://myp.readthedocs.io/en/latest)
 - [Azərbaycan dili](https://myp.readthedocs.io/az/latest)
