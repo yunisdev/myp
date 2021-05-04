@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: myp \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-03 15:31+0400\n"
+"POT-Creation-Date: 2021-05-04 19:19+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,11 +61,11 @@ msgstr "Asılılıqları requirements.txt faylına yaz"
 msgid "Get packages"
 msgstr "Paketləri əldə et"
 
-#: ../../myp get:1 get:deps:1 get:load-from:1
+#: ../../myp get:1
 msgid "Get packages as development dependency"
 msgstr "Paketləri development asılılığı kimi əldə et"
 
-#: ../../myp get:1 get:deps:1 get:load-from:1
+#: ../../myp get:1
 msgid "Get packages as production dependency"
 msgstr "Paketləri production asılılığı kimi əldə et"
 
@@ -73,7 +73,7 @@ msgstr "Paketləri production asılılığı kimi əldə et"
 msgid "Arguments"
 msgstr "Arqumentlər"
 
-#: ../../myp get:1
+#: ../../myp get:1 get:remove:1 get:update:1
 msgid "Required argument(s)"
 msgstr "Tələb olunan arqument(lər)"
 
@@ -81,9 +81,25 @@ msgstr "Tələb olunan arqument(lər)"
 msgid "Get packages in myp.json"
 msgstr "myp.json faylındakı paketləri əldə et"
 
+#: ../../myp get:deps:1
+msgid "Get development dependencies"
+msgstr "Development asılılıqlarını əldə et"
+
+#: ../../myp get:deps:1
+msgid "Get production dependencies"
+msgstr "Production asılılıqlarını əldə et"
+
 #: ../../myp get:load-from:1
 msgid "Get dependencies in requirements file"
 msgstr "Paketləri requirements faylından əldə et"
+
+#: ../../myp get:load-from:1
+msgid "Load packages as development dependency"
+msgstr "Paketləri development asılılığı kimi yüklə"
+
+#: ../../myp get:load-from:1
+msgid "Load packages as production dependency"
+msgstr "Paketləri production asılılığı kimi yüklə"
 
 #: ../../myp get:load-from:1
 msgid "Optional argument"
