@@ -21,11 +21,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install --upgrade myp
-        myp get setuptools twine wheel
+        pip install setuptools wheel twine myp
     - name: Build and publish
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: |
-        myp deploy
+        python setup.py sdist bdist_wheel
+        twine upload dist/*
