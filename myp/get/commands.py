@@ -19,8 +19,8 @@ def get_command(dev: bool, prod: bool, package_names: List[str]) -> None:
 
 
 @main.command("get:deps")
-@click.option('--dev', required=False, is_flag=True, help="Get packages as development dependency")
-@click.option('--prod', required=False, is_flag=True, help="Get packages as production dependency")
+@click.option('--dev', required=False, is_flag=True, help="Get development dependencies")
+@click.option('--prod', required=False, is_flag=True, help="Get production dependencies")
 def get_deps_command(dev: bool, prod: bool) -> None:
     """Get packages in myp.json"""
     myp: MYPReader = MYPReader()
@@ -30,8 +30,8 @@ def get_deps_command(dev: bool, prod: bool) -> None:
 
 
 @main.command("get:load-from")
-@click.option('--dev', required=False, is_flag=True, help="Get packages as development dependency")
-@click.option('--prod', required=False, is_flag=True, help="Get packages as production dependency")
+@click.option('--dev', required=False, is_flag=True, help="Load packages as development dependency")
+@click.option('--prod', required=False, is_flag=True, help="Load packages as production dependency")
 @click.argument('file_name', default='requirements.txt')
 def get_load_from_reqs_command(dev: bool, prod: bool, file_name: str) -> None:
     """Get dependencies in requirements file"""
@@ -41,3 +41,8 @@ def get_load_from_reqs_command(dev: bool, prod: bool, file_name: str) -> None:
     myp.add_dependency(reqs, reqs_scope)
     runScriptDirectly(pip_cmd(f"install {' '.join(reqs)}"))
     myp.write()
+
+@main.command("get:update")
+@click.argument('package_names', required=True, nargs=-1)
+def get_update_command(package_names) -> None:
+    runScriptDirectly(pip_cmd(f"install --upgrade {' '.join(package_names)}"))
