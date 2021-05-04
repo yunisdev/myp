@@ -1,5 +1,6 @@
 [![License](https://img.shields.io/pypi/l/myp)](https://github.com/yunisdev/myp/blob/master/LICENSE.txt) 
 [![Documentation Status](https://readthedocs.org/projects/myp/badge/?version=latest)](myp.readthedocs.io/en/latest/?badge=latest) 
+[![Upload Python Package](https://github.com/yunisdev/myp/actions/workflows/python-publish.yml/badge.svg)](https://github.com/yunisdev/myp/actions/workflows/python-publish.yml)
 [![Pylint](https://github.com/yunisdev/myp/actions/workflows/pylint.yml/badge.svg)](https://github.com/yunisdev/myp/actions/workflows/pylint.yml) 
 [![Pypi](https://img.shields.io/pypi/v/myp?logo=python&logoColor=white)](https://pypi.org/project/myp/) 
 ![Size](https://img.shields.io/github/repo-size/yunisdev/myp?logo=github)
