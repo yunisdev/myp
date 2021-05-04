@@ -42,7 +42,22 @@ def get_load_from_reqs_command(dev: bool, prod: bool, file_name: str) -> None:
     runScriptDirectly(pip_cmd(f"install {' '.join(reqs)}"))
     myp.write()
 
+
 @main.command("get:update")
 @click.argument('package_names', required=True, nargs=-1)
 def get_update_command(package_names) -> None:
     runScriptDirectly(pip_cmd(f"install --upgrade {' '.join(package_names)}"))
+
+
+@main.command("get:remove")
+@click.argument('package_names', required=True, nargs=-1)
+def get_remove_command(package_names) -> None:
+    myp: MYPReader = MYPReader()
+    runScriptDirectly(pip_cmd(f"uninstall {' '.join(package_names)}"))
+    dependencies = myp.get_data('dependencies')
+    new_deps = {"dev": [], "prod": [], "common": []}
+    for scope in ["dev", "prod", "commmon"]:
+        for dep in dependencies[scope]:
+            if not dep in package_names:
+                new_deps[scope].append(dep)
+    myp.set_data('dependencies', new_deps)
