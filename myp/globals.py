@@ -1,11 +1,12 @@
 from . import const
 import json
 import os
+import subprocess
 import click
 from .package import MYPReader
 from termcolor2 import c
 from PyInquirer import prompt
-from typing import List
+from typing import Any, List
 
 
 def loadScripts() -> dict:
@@ -13,16 +14,19 @@ def loadScripts() -> dict:
     return myp.get_data("scripts")
 
 
-def runScriptDirectly(script:str):
+def runScriptDirectly(script: str):
     click.echo('\n\t' + c('>').blue + c('>').yellow + f' {script}\n')
-    myp_obj = MYPReader()
+    myp_obj: MYPReader = MYPReader()
+    output: subprocess.CompletedProcess
     if myp_obj.get_data("use_environment"):
-        os.system(f'snakenv {myp_obj.get_data("environment")} -c "{script}"')
+        # os.system(f'snakenv {myp_obj.get_data("environment")} -c "{script}"')
+        output = subprocess.run(['snakenv', myp_obj.get_data("environment"), "-c", script])
     else:
-        os.system(script)
+        # os.system(script)
+        output = subprocess.run(script.split())
+    
 
-
-def runScriptIfExist(name:str):
+def runScriptIfExist(name: str):
     scripts = loadScripts()
     called_script = scripts.get(name, None)
     if called_script:
@@ -70,9 +74,11 @@ def process_unknown_options(args: List[str]) -> dict:
                 temp = ""
     return data
 
-def pip_cmd(cmd:str) -> str:
+
+def pip_cmd(cmd: str) -> str:
     import sys
     return f"python -m pip {cmd}"
+
 
 def parse_requirements(filename):
     lineiter = (line.strip() for line in open(filename))

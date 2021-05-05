@@ -17,4 +17,4 @@ def cli():
     try:
         main()
     except Exception as e:
-        print("❌ "+str(e))
+        print("❌ [MYP] "+str(e))
