@@ -20,8 +20,9 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        python -m pip install --upgrade myp
+        python -m pip install --upgrade pip myp
+    - name: Get dependencies
+      run: |
         myp get:deps
     - name: Build and publish
       env:
