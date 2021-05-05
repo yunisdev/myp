@@ -28,7 +28,7 @@
     "name": "myp",
     "scripts": {
         "deploy": {
-            "command": "python -m twine upload --skip-existing --repository-url https://upload.pypi.org/legacy/ dist/*",
+            "command": "twine upload --skip-existing --repository-url https://upload.pypi.org/legacy/ dist/*",
             "description": "Upload to PYPI"
         },
         "predeploy": {
