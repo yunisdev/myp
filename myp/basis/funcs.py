@@ -10,8 +10,6 @@ def initialize(template_name, disable_oninit=False):
     schema = template['body']
     schema["version"] = '0.0.0'
     schema["config"] = {}
-    schema["dependencies"] = schema.get("dependencies",{"prod": [], "common": [], "dev": []})
-    schema["environment"] = ""
     schema["use_environment"] = True
     current_dir = os.path.basename(os.getcwd())
 

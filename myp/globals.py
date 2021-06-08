@@ -20,7 +20,7 @@ def runScriptDirectly(script: str):
     output: subprocess.CompletedProcess
     if myp_obj.get_data("use_environment"):
         # os.system(f'snakenv {myp_obj.get_data("environment")} -c "{script}"')
-        output = subprocess.run(['snakenv', myp_obj.get_data("environment"), "-c", script])
+        output = subprocess.run(['pipenv run', script])
     else:
         # os.system(script)
         output = subprocess.run(script.split())

@@ -8,7 +8,6 @@ def main():
 from .basis import *
 from .scripts import *
 from .pip import *
-from .get import *
 
 def cli():
     args = sys.argv

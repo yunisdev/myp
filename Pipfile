@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "*"
+PyInquirer = "*"
+termcolor2 = "*"
+prettytable = "*"
+pipfile = "*"
+
+[dev-packages]
+wheel = "*"
+setuptools = "*"
+sphinx = "*"
+autopep8 = "*"
+sphinx-click = "*"
+sphinx-intl = "*"
+twine = "*"
+pep8 = "*"
+
+[requires]
+python_version = "3.8"

@@ -2,27 +2,6 @@
     "author": "yunisdev",
     "author_email": "yunisdev.04@gmail.com",
     "config": {},
-    "dependencies": {
-        "common": [
-            "click",
-            "snakenv",
-            "PyInquirer",
-            "termcolor2",
-            "prettytable"
-        ],
-        "dev": [
-            "wheel",
-            "setuptools",
-            "sphinx",
-            "autopep8",
-            "furo",
-            "sphinx-click",
-            "sphinx-intl",
-            "twine",
-            "pep8"
-        ],
-        "prod": []
-    },
     "description": "Manage your Python apps easily.",
     "environment": "",
     "name": "myp",

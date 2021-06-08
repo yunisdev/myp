@@ -1,7 +1,7 @@
 import json
 from typing import List, Any
 from .. import const
-
+from pipfile import Pipfile
 
 class MYPReader:
     data: dict
@@ -38,20 +38,11 @@ class MYPReader:
         """Remove script from object"""
         return self.data["scripts"].pop(name)
 
-    def add_dependency(self, package_name: List[str], scope: str = "common"):
-        """Add dependency to object"""
-        self.data["dependencies"][scope].extend(package_name)
-        self.data["dependencies"][scope] = list(
-            set(self.data["dependencies"][scope]))
-
-    def get_dependencies(self, scope: str = "all") -> List[str]:
+    def get_dependencies(self, scope: str = "default") -> List[str]:
         """Get dependencies of object"""
-        deps: dict = self.data["dependencies"]
-        if scope == "all":
-            return list(set(deps["dev"]+deps["prod"]+deps["common"]))
-        elif scope == "prod":
-            return list(set(deps["prod"]+deps["common"]))
+        deps: dict = Pipfile.load(filename="./Pipfile").data
+        if scope == "default":
+            return list(deps["default"])
         elif scope == "dev":
-            return list(set(deps["dev"]+deps["common"]))
-
+            return list(deps["develop"])
         return []
