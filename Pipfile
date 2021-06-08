@@ -9,6 +9,7 @@ PyInquirer = "*"
 termcolor2 = "*"
 prettytable = "*"
 pipfile = "*"
+pipenv = "*"
 
 [dev-packages]
 wheel = "*"

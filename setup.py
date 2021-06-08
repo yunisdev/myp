@@ -7,6 +7,8 @@ with open("README.md","r") as fh:
 
 myp = MYPReader()
 
+requirements = myp.get_dependencies()
+
 setuptools.setup(
     name=myp.get_data("name"),
     version=myp.get_data("version"),
@@ -24,8 +26,8 @@ setuptools.setup(
         "Topic :: Software Development",
         "Natural Language :: English"
     ],
-    install_requires=myp.get_dependencies("prod"),
-    setup_requires=myp.get_dependencies("prod"),
+    install_requires=requirements,
+    setup_requires=requirements,
     python_requires='>=3.6',
     entry_points='''
         [console_scripts]

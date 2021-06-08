@@ -42,7 +42,7 @@ class MYPReader:
         """Get dependencies of object"""
         deps: dict = Pipfile.load(filename="./Pipfile").data
         if scope == "default":
-            return list(deps["default"])
+            return list(deps["default"]) 
         elif scope == "dev":
             return list(deps["develop"])
         return []
