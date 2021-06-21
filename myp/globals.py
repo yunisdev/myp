@@ -24,7 +24,8 @@ def runScriptDirectly(script: str):
     else:
         # os.system(script)
         output = subprocess.run(script.split())
-    
+    if not output.returncode == 0:
+        raise Exception(f"Process exited with code {output.returncode}")
 
 def runScriptIfExist(name: str):
     scripts = loadScripts()
